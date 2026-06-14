@@ -1,0 +1,26 @@
+StudySmart – No-Build-Version für GitHub Pages
+================================================
+
+Diese Variante braucht KEINE Installation und KEINEN Build. Einfach hochladen, fertig.
+
+So geht's:
+1. Neues Repository auf GitHub anlegen (z. B. "studysmart").
+2. Die Dateien aus diesem ZIP (index.html und .nojekyll) in das Repo hochladen
+   - entweder per Drag & Drop auf github.com ("Add file" -> "Upload files")
+   - oder per Git push.
+3. Im Repo: Settings -> Pages -> "Source": Branch "main", Ordner "/ (root)" -> Save.
+4. Nach ca. 1 Minute ist die Seite erreichbar unter:
+   https://<DEIN-GITHUB-NAME>.github.io/<REPO-NAME>/
+
+In der App:
+- Oben rechts aufs Zahnrad klicken und deinen eigenen API-Schlüssel eintragen
+  (Anthropic "sk-ant-..." oder OpenAI "sk-...").
+- PDF hochladen -> "Prüfung generieren" -> Prüfung machen -> Auswertung + PDF-Export.
+
+Hinweise:
+- Der Schlüssel wird nur lokal in deinem Browser gespeichert (localStorage) und
+  direkt an den Anbieter gesendet. Teile die Seite nicht mit eingetragenem Schlüssel.
+- Beim allerersten Laden dauert es ein paar Sekunden, weil React/pdf.js per CDN geladen
+  und das JSX im Browser umgewandelt wird. Eine Internetverbindung ist nötig.
+- Modell ändern? In index.html oben die Zeilen ANTHROPIC_MODEL / OPENAI_MODEL anpassen.
+- Gescannte PDFs (reine Bilder) enthalten keinen auslesbaren Text.
